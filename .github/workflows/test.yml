@@ -22,7 +22,7 @@ jobs:
           node-version: 22
 
       - name: Download Dependencies
-        run : npm Ci
+        run : npm ci
 
       - name: run node test
         run : node --test
