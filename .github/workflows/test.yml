@@ -3,7 +3,7 @@ name: Ci test workflow
 
 on:
  push:
-  branches: [main]
+  branches: [master]
 
 
 
