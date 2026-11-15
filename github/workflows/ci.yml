@@ -1,0 +1,32 @@
+name: Ci test workflow
+
+
+on:
+ push:
+  branches: [main]
+
+
+
+jobs:
+ tests:
+   runs-on: ubuntu-latest
+
+
+   steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Download Dependencies
+        run : npm Ci
+
+      - name: run node test
+        run : node --test
+
+      - name : Security Vunlnearbilities
+        run : npm audit
+
